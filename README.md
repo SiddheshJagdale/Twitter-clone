@@ -1,13 +1,14 @@
 # Twitter Clone
 
-This is a Twitter clone built with modern technologies, allowing users to post tweets, follow others, like posts, and more. It’s designed to be scalable and efficient with the help of tools like React, Next.js, Prisma, and PostgreSQL.
+This is a Twitter clone built with modern technologies, allowing users to post tweets, follow others, like posts, comment, and more. It’s designed to be scalable and efficient with the help of tools like React, Next.js, Prisma, and PostgreSQL.
 
 ## Features
 
-- **User Authentication**: Sign up, log in, and log out.
+- **User Authentication**: Sign up, log in, and log out (with Google authentication).
 - **Tweeting**: Create, read, update, and delete tweets.
 - **Following**: Follow and unfollow other users.
 - **Likes**: Like and unlike tweets.
+- **Comments**: Add comments to tweets.
 - **Real-Time Updates**: Receive updates to your feed in real-time.
 - **Responsive Design**: Looks great on all devices.
 
@@ -27,7 +28,7 @@ This is a Twitter clone built with modern technologies, allowing users to post t
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/twitter-clone.git
+    git clone https://github.com/SiddheshJagdale/twitter-clone.git
     cd twitter-clone
     ```
 
@@ -52,10 +53,13 @@ This is a Twitter clone built with modern technologies, allowing users to post t
 ## Screenshots
 
 ### Home Page
-![Home Page](path-to-your-screenshot.png)
+![Home Page](https://github.com/SiddheshJagdale/Twitter-clone/blob/master/images/home.png)
 
-### Tweet Page
-![Tweet Page](path-to-your-screenshot.png)
+### Login Page
+![Login Page](https://github.com/SiddheshJagdale/Twitter-clone/blob/master/images/login.png)
+
+###  User Profile 
+![ User Profile ](https://github.com/SiddheshJagdale/Twitter-clone/blob/master/images/profile.png)
 
 ## Project Structure
 
