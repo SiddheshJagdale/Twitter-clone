@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { useCallback } from "react";
 import Image from "next/image";
 import Img1 from "@/public/Images/user_placeholder.png";
-import ConnectionsModal from "./Modals/ConnectionsModal";
 import useConnectionsModal from "@/hooks/useConnectionsModal";
 
 interface AvatarProps {

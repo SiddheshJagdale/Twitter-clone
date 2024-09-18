@@ -14,21 +14,22 @@ datasource db {
 }
 
 model User {
-  id             String         @id @default(uuid()) @map("id")
-  name           String?
-  username       String?        @unique
-  bio            String?
-  email          String?        @unique
-  emailVerified  DateTime?
-  coverImage     String?
-  profileImage   String?
-  createdAt      DateTime?      @default(now())
-  updatedAt      DateTime?      @updatedAt()
-  followingIds   String[]
-  hashedPassword String?
-  posts          Post[]
-  comments       Comment[]
-  notifications  Notification[]
+  id              String         @id @default(uuid()) @map("id")
+  name            String?
+  username        String?        @unique
+  bio             String?
+  email           String?        @unique
+  emailVerified   DateTime?
+  coverImage      String?
+  profileImage    String?
+  createdAt       DateTime?      @default(now())
+  updatedAt       DateTime?      @updatedAt()
+  followingIds    String[]
+  hashedPassword  String?
+  hasNotification Boolean?
+  posts           Post[]
+  comments        Comment[]
+  notifications   Notification[]
 }
 
 model Post {

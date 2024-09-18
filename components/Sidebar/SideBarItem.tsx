@@ -3,13 +3,15 @@ import useLoginModal from "@/hooks/useLoginModal";
 import { useRouter } from "next/router";
 import React, { useCallback } from "react";
 import { IconType } from "react-icons";
+import { BsDot } from "react-icons/bs";
 
 interface SideBarProps {
   label: string;
   href?: string;
   icon: IconType;
   onClick?: () => void;
-  auth?:boolean
+  auth?: boolean;
+  alert?: boolean;
 }
 
 const SideBarItem: React.FC<SideBarProps> = ({
@@ -17,22 +19,22 @@ const SideBarItem: React.FC<SideBarProps> = ({
   href,
   icon: Icon,
   onClick,
-  auth
+  auth,
+  alert,
 }) => {
-
-  const loginModal = useLoginModal()
-  const {data:currentUser} = useCurrentUser();
+  const loginModal = useLoginModal();
+  const { data: currentUser } = useCurrentUser();
   const router = useRouter();
   const handleClick = useCallback(() => {
     if (onClick) {
       return onClick();
     }
-    if(auth && !currentUser){
-      loginModal.onOpen()
-    }else if (href) {
+    if (auth && !currentUser) {
+      loginModal.onOpen();
+    } else if (href) {
       router.push(href);
     }
-  }, [router, onClick, href,currentUser,loginModal]);
+  }, [router, onClick, href, currentUser, loginModal]);
 
   return (
     <div
@@ -57,6 +59,9 @@ const SideBarItem: React.FC<SideBarProps> = ({
         lg:hidden"
       >
         <Icon size={28} color="white" />
+        {alert ? (
+          <BsDot className="text-sky-500 absolute -top-4 left-0" size={70} />
+        ) : null}
       </div>
       <div
         className="
@@ -75,6 +80,9 @@ const SideBarItem: React.FC<SideBarProps> = ({
       "
       >
         <Icon size={28} color="white" />
+        {alert ? (
+          <BsDot className="text-sky-500 absolute -top-4 left-0" size={70} />
+        ) : null}
         <p
           className="
         hidden 
@@ -84,6 +92,9 @@ const SideBarItem: React.FC<SideBarProps> = ({
         >
           {label}
         </p>
+        {alert ? (
+          <BsDot className="text-sky-500 absolute -top-4 left-0" size={70} />
+        ) : null}
       </div>
     </div>
   );

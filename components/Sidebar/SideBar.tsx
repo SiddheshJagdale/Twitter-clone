@@ -33,6 +33,7 @@ const Sidebar = () => {
       href: "/notifications",
       icon: FaBell,
       auth: true,
+      alert: currentUser?.hasNotification,
     },
     {
       label: "Profile",
@@ -40,31 +41,6 @@ const Sidebar = () => {
       icon: FaUser,
       auth: true,
     },
-    // {
-    //   label: "Messages",
-    //   href: "/messages",
-    //   icon: FaEnvelope,
-    // },
-    // {
-    //   label: "Explore",
-    //   href: "/explore",
-    //   icon: FaCompass,
-    // },
-    // {
-    //   label: "Grok",
-    //   href: "/grok",
-    //   icon: FaBrain,
-    // },
-    // {
-    //   label: "Communities",
-    //   href: "/communities",
-    //   icon: FaUsers,
-    // },
-    // {
-    //   label: "Premium",
-    //   href: "/premium",
-    //   icon: FaCrown,
-    // },
   ];
 
   return (
@@ -80,6 +56,7 @@ const Sidebar = () => {
               icon={item.icon}
               label={item.label}
               auth={item.auth}
+              alert={item.alert}
             />
           );
         })}
