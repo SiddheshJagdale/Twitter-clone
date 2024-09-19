@@ -65,7 +65,7 @@ const EditModal = () => {
     coverImage,
     mutateFetchedUser,
     editModal,
-    toast,
+    
   ]);
 
   const BodyContent = (

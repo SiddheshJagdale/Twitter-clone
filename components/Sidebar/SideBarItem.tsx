@@ -34,7 +34,7 @@ const SideBarItem: React.FC<SideBarProps> = ({
     } else if (href) {
       router.push(href);
     }
-  }, [router, onClick, href, currentUser, loginModal]);
+  }, [router, onClick, href, currentUser, loginModal,auth]);
 
   return (
     <div

@@ -1,7 +1,6 @@
 import React, { useCallback } from "react";
 import { GiFeather } from "react-icons/gi";
 import useLoginModal from "@/hooks/useLoginModal";
-import LoginModal from "../Modals/LoginModal";
 
 const SideBarTweetButton = () => {
 
@@ -9,7 +8,7 @@ const SideBarTweetButton = () => {
 
   const onClick = useCallback(()=>{
     loginModal.onOpen();
-  },[])
+  },[loginModal])
   return (
     <div className="flex flex-row items-center mt-1" onClick={()=>onClick()}>
       <div

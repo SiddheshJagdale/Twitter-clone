@@ -24,7 +24,7 @@ const Avatar: React.FC<AvatarProps> = ({ userId, isLarge, hasBorder }) => {
       router.push(url);
       connectionsModal.onClose();
     },
-    [router, userId]
+    [router, userId ,connectionsModal]
   );
 
   return (

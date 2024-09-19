@@ -37,7 +37,7 @@ const LoginModal = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [loginModal, email, password, toast]);
+  }, [loginModal, email, password]);
 
   const BodyContent = (
     <div className="flex flex-col gap-4 p-4">

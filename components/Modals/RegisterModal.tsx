@@ -53,7 +53,7 @@ const RegisterModal = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [registerModal, name, username, password, email]);
+  }, [registerModal, name, username, password, email, id]);
 
   const BodyContent = (
     <div className="flex flex-col gap-4 p-4">

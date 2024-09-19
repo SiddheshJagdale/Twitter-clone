@@ -24,8 +24,8 @@ const Modal: React.FC<ModalProps> = ({
   body,
   footer,
   actionLabel,
-  onClose,
-  onSubmit,
+  onClose = () => {},
+  onSubmit = () => {},
   googleButton,
   submitButton,
 }) => {
